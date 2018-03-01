@@ -17,10 +17,13 @@ Version 0.1
 
 # Creates the following structure
 
-- A file for common variables, (variables.tf) used accross all environments, with simlinks in each.
-- (initialize.tf) for empty variable definitions, with simlinks in each environment.
-- Three environments, dev, staging and production.
-- Three core folders, Global: which is for overall s3 and iam, mgmt: for tools and modules.
+- A file for common variables, _variables.tf_ used accross all environments, with simlinks in each.
+- _initialize.tf_ for empty variable definitions, with simlinks in each environment.
+- Three environments: dev, staging and production.
+- *Three core folders:*
+- Global: which is for overall s3 and iam
+- mgmt: for tool instances, e.g. bastion, ci, it's own vpc for network security.
+- modules - here you may want to create a folder for each module.
 
 ```
 .

@@ -16,10 +16,18 @@ Created so I could create consistent structures every time. I hope it helps.
 Version 0.1
 
 # Creates the following structure
+
+- A file for common variables, (variables.tf) used accross all environments, with simlinks in each.
+- (initialize.tf) for empty variable definitions, with simlinks in each environment.
+- Three environments, dev, staging and production.
+- Three core folders, Global: which is for overall s3 and iam, mgmt: for tools and modules.
+
 ```
 .
 ├── create-terraform-structure.sh
 └── projectName
+    ├── initialize.tf
+    ├── variables.tf
     ├── dev
     │   ├── data-storage
     │   ├── dev.tf
@@ -36,7 +44,6 @@ Version 0.1
     ├── global
     │   ├── iam
     │   └── s3
-    ├── initialize.tf
     ├── mgmt
     │   ├── bastion-host
     │   ├── ci
@@ -68,18 +75,17 @@ Version 0.1
     │   │   └── frontend
     │   ├── variables.tf -> projectName/variables.tf
     │   └── vpc
-    ├── stage
-    │   ├── data-storage
-    │   ├── iam
-    │   ├── initialize.tf -> projectName/initialize.tf
-    │   ├── outputs.tf
-    │   ├── s3
-    │   ├── services
-    │   │   ├── backend
-    │   │   └── frontend
-    │   ├── stage.tf
-    │   ├── stage.tfvars
-    │   ├── variables.tf -> projectName/variables.tf
-    │   └── vpc
-    └── variables.tf
+    ├── staging
+        ├── data-storage
+        ├── iam
+        ├── initialize.tf -> projectName/initialize.tf
+        ├── outputs.tf
+        ├── s3
+        ├── services
+        │   ├── backend
+        │   └── frontend
+        ├── staging.tf
+        ├── staging.tfvars
+        ├── variables.tf -> projectName/variables.tf
+        └── vpc
 ```

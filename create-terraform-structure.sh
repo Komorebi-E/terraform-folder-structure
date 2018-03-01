@@ -24,7 +24,7 @@ echo
 
 declare -a terraform_fnames=('.tf' '.tfvars' 'outputs.tf' 'SYMLINKS')
 
-declare -a main_folders=('dev' 'stage' 'production' 'modules')
+declare -a main_folders=('dev' 'staging' 'production' 'modules')
 
 declare -a sub_folders=('iam' 's3' 'services/frontend' 'services/backend' 'data-storage' 'vpc')
 

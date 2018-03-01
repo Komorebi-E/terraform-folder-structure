@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # Contact: Adey Merrett
+# Version 0.1
 
 set -e
 # set -ex Terminate on error and output each command

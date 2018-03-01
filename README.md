@@ -1,4 +1,4 @@
-#Terraform Folder Structure
+# Terraform Folder Structure
 
 This script is following the good practices / advice of Charity Majors and Kelsey Hightower
 for how you separate your terraform state files and variables.
@@ -9,11 +9,13 @@ See Charity's detailed blog post here:
 
 Created so I could create consistent structures every time. I hope it helps.
 
-#Usage
+# Usage
 
 ./create-terraform-structure.sh (projectName)
 
-#Creates
+Version 0.1
+
+# Creates the following structure
 ```
 .
 ├── create-terraform-structure.sh
